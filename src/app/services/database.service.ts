@@ -6,7 +6,7 @@ import { initSupabase } from '../utils/initSupabase';
 @Injectable({
   providedIn: 'root',
 })
-export class ApiService {
+export class DatabaseService {
   supabase: SupabaseClient = createClient(
     initSupabase.supabaseUrl,
     initSupabase.supabaseKey
