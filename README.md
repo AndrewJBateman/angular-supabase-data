@@ -1,8 +1,12 @@
 # Angular Supabase Data
 
-* Angular frontend data entry form with with Supabase database backend
+* Angular frontend data entry form with a Supabase PostgreSQL database backend
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-*** Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-supabase-data?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-supabase-data?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-supabase-data?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-supabase-data?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -21,7 +25,8 @@
 
 ## :books: General info
 
-* Supabase
+* Supabase is an open-source alternative to Firebase, but uses PostgreSQL instead of document database. Database is realtime & can use SQL joins. Realtime notifications via Websockets. RESTful API requires no backend code.
+* rxjs was not required for Observables etc.
 
 ## :camera: Screenshots
 
@@ -31,8 +36,8 @@
 ## :signal_strength: Technologies
 
 * [Angular v12](https://angular.io/)
-* [Supabase public Beta](https://supabase.io/) open-source alternative to Firebase, but PostgreSQL instead of document database. Realtime, can use SQL joins. Realtime notifications via Websockets. RESTful API requires no backend code
-* [Bootstrap v4]() styling
+* [Supabase public Beta](https://supabase.io/) 
+* [Bootstrap v4](https://getbootstrap.com/) responsive styling, including ready-made [forms](https://getbootstrap.com/docs/5.0/forms/overview/)
 * [Font Awesome v4](https://fontawesome.com/v4.7/icons/) free icons
 
 ## :floppy_disk: Setup
@@ -62,19 +67,21 @@ create table todos (
 
 ## :cool: Features
 
-* Supabase user interface is cool to work with and they have template SQL to create tables etc.
+* Supabase user interface is cool to work with and they have SQL templates to create tables etc.
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working
-* To-Do: Add fields like created & updated dates. Note: strict mode set to false due to database payload = null possibility - fix this this and set `tsconfig` strict back to true.
+* To-Do: Add fields like created & updated dates. Note: strict mode set to false due to database payload = null possibility - fix & set `tsconfig` strict back to true.
 * To-Do: disable clear button when in edit mode.
 * To-Do: add linting eslint
+* To-Do: use Angular routing to add more Supabase tables etc. or remove
 
 ## :clap: Inspiration
 
 * [Prasanna Kumar: Build a Todo app in React with Supabase - The Open-Source Firebase alternative](https://blog.prasanna.codes/build-a-todo-app-in-react-with-supabase-the-open-source-firebase-alternative) - to see how to create SQL table in Supabase
 * [Diligent Dev: Supabase - The Open-source Alternative to Firebase](https://www.youtube.com/watch?v=RpnDkUMNzK0)
+* [Fireship: Is Supabase Legit? Firebase Alternative Breakdown](https://www.youtube.com/watch?v=WiwfiVdfRIc)
 
 ## :file_folder: License
 
