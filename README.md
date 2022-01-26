@@ -27,7 +27,7 @@
 ## :books: General info
 
 * Supabase is an open-source alternative to Firebase, but uses PostgreSQL instead of document database. Database is realtime & can use SQL joins. Realtime notifications via Websockets. RESTful API requires no backend code.
-* rxjs was not required for Observables etc.
+* RxJS was not required for Observables etc.
 
 ## :camera: Screenshots
 
@@ -36,8 +36,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v12](https://angular.io/)
-* [Supabase public Beta](https://supabase.io/) 
+* [Angular v13](https://angular.io/)
+* [Supabase public Beta](https://supabase.io/) Postgres alternative to Firebase
 * [Bootstrap v4](https://getbootstrap.com/) responsive styling, including ready-made [forms](https://getbootstrap.com/docs/5.0/forms/overview/)
 * [Font Awesome v4](https://fontawesome.com/v4.7/icons/) free icons
 
@@ -51,7 +51,7 @@
 
 ## :flashlight: Testing
 
-* `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io). No tests setup.
 * `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## :computer: Code Examples
@@ -74,7 +74,6 @@ create table todos (
 
 * Status: Working
 * To-Do: Add fields like created & updated dates. Note: strict mode set to false due to database payload = null possibility - fix & set `tsconfig` strict back to true.
-* To-Do: disable clear button when in edit mode.
 * To-Do: add linting eslint
 * To-Do: use Angular routing to add more Supabase tables etc. or remove
 
