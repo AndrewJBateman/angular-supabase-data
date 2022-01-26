@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   todos: Todo[] = [{id: '', name: '', done: false}] as Todo[];
   todo: Todo = {id: '', name: '', done: false} as Todo;
   actionLabel: string;
+  inUpdateMode = false;
 
   constructor(private dbService: DatabaseService) {}
 
@@ -34,17 +35,20 @@ export class AppComponent implements OnInit {
   onAddTodo() {
     if (this.todo.id) {
       this.updateTodo();
+      this.inUpdateMode = false
       return;
     }
     this.dbService.addTodo(this.todo).then(
       (payload) => {
       this.todos.push(payload.data[0]);
       this.clear();
+      this.inUpdateMode = false
     });
   }
 
   onSelectTodo(todo: Todo) {
     this.todo = todo;
+    this.inUpdateMode = true;
     this.actionLabel = 'UPDATE';
   }
 

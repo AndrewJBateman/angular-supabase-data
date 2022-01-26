@@ -55,6 +55,7 @@
             {{ actionLabel }}
           </button>
           <button
+            [disabled]="inUpdateMode"
             type="button"
             class="btn btn-sm btn-warning mr3"
             (click)="onClearInput()"
