@@ -8,8 +8,8 @@ import { Todo } from './models/todo.model';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  todos: Todo[] = [{id: '', name: '', done: false}] as Todo[];
-  todo: Todo = {id: '', name: '', done: false} as Todo;
+  todos: Todo[] = [{ id: '', name: '', done: false }] as Todo[];
+  todo: Todo = { id: '', name: '', done: false } as Todo;
   actionLabel: string;
   inUpdateMode = false;
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.clear();
     this.dbService.getTodos().then((payload) => {
-        this.todos = payload.data;
+      this.todos = payload.data;
     });
   }
 
@@ -28,21 +28,21 @@ export class AppComponent implements OnInit {
   }
 
   onClearInput() {
-      console.log('clear input clicked');
-      this.todo = new Todo();
+    console.log('clear input clicked');
+    this.todo = new Todo();
   }
 
   onAddTodo() {
     if (this.todo.id) {
       this.updateTodo();
-      this.inUpdateMode = false
+      this.inUpdateMode = false;
       return;
     }
-    this.dbService.addTodo(this.todo).then(
-      (payload) => {
-      this.todos.push(payload.data[0]);
+    this.dbService.addTodo(this.todo).then(() => {
+
+      this.todos.unshift(this.todo);
       this.clear();
-      this.inUpdateMode = false
+      this.inUpdateMode = false;
     });
   }
 
