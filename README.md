@@ -10,7 +10,7 @@
 
 ## :page_facing_up: Table of contents
 
-* [:zap: Angular Supabase Data](#zap-angular-supabase-data)
+* [Angular Supabase Data](#angular-supabase-data)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
@@ -36,7 +36,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v13](https://angular.io/)
+* [Angular v14](https://angular.io/)
 * [Supabase public Beta](https://supabase.io/) Postgres alternative to Firebase
 * [Bootstrap v4](https://getbootstrap.com/) responsive styling, including ready-made [forms](https://getbootstrap.com/docs/5.0/forms/overview/)
 * [Font Awesome v4](https://fontawesome.com/v4.7/icons/) free icons
@@ -73,7 +73,7 @@ create table todos (
 ## :clipboard: Status & To-Do List
 
 * Status: Working
-* To-Do: Add fields like created & updated dates. Note: strict mode set to false due to database payload = null possibility - fix & set `tsconfig` strict back to true.
+* To-Do: Add fields like created & updated dates. Set strict mode to true and correct type error
 * To-Do: add linting eslint
 * To-Do: use Angular routing to add more Supabase tables etc. or remove
 
