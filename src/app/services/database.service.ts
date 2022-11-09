@@ -16,22 +16,23 @@ export class DatabaseService {
 
   async addTodo(todo: Todo) {
     const { data, error } = await this.supabase
-      .from<Todo>('todos')
+      .from('todos')
       .insert(todo);
     return { data, error };
   }
 
   async getTodos() {
-    const { data, error } = await this.supabase
-      .from<Todo>('todos')
+    const { data: todos, error } = await this.supabase
+      .from('todos')
       .select('*')
+      .order('id', { ascending: false })
       .limit(10);
-    return { data, error };
+    return { data: todos, error };
   }
 
   async update(todo: Todo) {
     const { data, error } = await this.supabase
-      .from<Todo>('todos')
+      .from('todos')
       .update(todo)
       .match({ id: todo.id });
     return { data, error };
@@ -39,7 +40,7 @@ export class DatabaseService {
 
   async deleteTodo(todo: Todo) {
     const { data, error } = await this.supabase
-      .from<Todo>('todos')
+      .from('todos')
       .delete()
       .match({ id: todo.id });
     return { data, error };
