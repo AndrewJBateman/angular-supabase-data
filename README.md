@@ -38,14 +38,14 @@
 
 * [Angular v14](https://angular.io/)
 * [Supabase public Beta](https://supabase.io/) Postgres alternative to Firebase
-* [Bootstrap v4](https://getbootstrap.com/) responsive styling, including ready-made [forms](https://getbootstrap.com/docs/5.0/forms/overview/)
+* [Bootstrap v5](https://getbootstrap.com/) responsive styling, including ready-made [forms](https://getbootstrap.com/docs/5.0/forms/overview/)
 * [Font Awesome v4](https://fontawesome.com/v4.7/icons/) free icons
 
 ## :floppy_disk: Setup
 
 * `npm i` to install dependencies then...
-* Create free account with Supabase and create table using SQL option
-* add Supabase credentials to `utils/initSupabase.ts`
+* Create free account with Supabase and create table using SQL option. Do not enable RLS (Row Level Security)
+* Add Supabase credentials to `utils/initSupabase.ts`
 * `ng serve` for a dev server. Navigate to `http://localhost:4200/` - app will automatically reload if you change any of the source files
 * `ng build --prod` for a build folder
 
