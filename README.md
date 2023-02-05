@@ -36,8 +36,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v14](https://angular.io/)
-* [Supabase public Beta](https://supabase.io/) Postgres alternative to Firebase
+* [Angular v15](https://angular.io/)
+* [Supabase public v2](https://supabase.io/) Postgres alternative to Firebase
 * [Bootstrap v5](https://getbootstrap.com/) responsive styling, including ready-made [forms](https://getbootstrap.com/docs/5.0/forms/overview/)
 * [Font Awesome v4](https://fontawesome.com/v4.7/icons/) free icons
 
