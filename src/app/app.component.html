@@ -3,14 +3,7 @@
   <div class="row m-1 p-4">
     <div class="col">
       <div
-        class="
-          p-1
-          h3
-          bg-primary
-          text-white text-center
-          mx-auto
-          display-inline-block
-        "
+        class="p-1 h3 bg-primary text-white text-center mx-auto display-inline-block"
       >
         <i class="fa fa-sticky-note rounded p-2 pr-2"></i><b>TODO LIST</b>
       </div>
@@ -20,26 +13,11 @@
   <div class="row m-1 p-3">
     <div class="col col-11 mx-auto">
       <div
-        class="
-          row
-          bg-white
-          rounded
-          shadow-sm
-          p-2
-          add-todo-wrapper
-          align-items-center
-          justify-content-center
-        "
+        class="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center"
       >
         <div class="col">
           <input
-            class="
-              form-control form-control-lg
-              border-0
-              add-todo-input
-              bg-transparent
-              rounded
-            "
+            class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded"
             [(ngModel)]="todo.name"
             type="text"
             placeholder="Add item..."
@@ -90,14 +68,7 @@
         <div class="col px-1 m-1 d-flex align-items-center">
           <input
             type="text"
-            class="
-              form-control form-control-lg
-              border-0
-              edit-todo-input
-              bg-transparent
-              rounded
-              px-3
-            "
+            class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3"
             readonly
             [value]="todo.name"
           />
