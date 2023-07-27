@@ -1,102 +1,95 @@
 <div class="container m-5 p-2 rounded mx-auto bg-light shadow">
-  <!-- App title section -->
-  <div class="row m-1 p-4">
-    <div class="col">
-      <div
-        class="p-1 h3 bg-primary text-white text-center mx-auto display-inline-block"
-      >
-        <i class="fa fa-sticky-note rounded p-2 pr-2"></i><b>TODO LIST</b>
-      </div>
-    </div>
-  </div>
-  <!-- Create todo -->
-  <div class="row m-1 p-3">
-    <div class="col col-11 mx-auto">
-      <div
-        class="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center"
-      >
-        <div class="col">
-          <input
-            class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded"
-            [(ngModel)]="todo.name"
-            type="text"
-            placeholder="Add item..."
-          />
-        </div>
+	<!-- App title section -->
+	<div class="row m-1 p-4">
+		<div class="col">
+			<div
+				class="p-1 h3 bg-primary text-white text-center mx-auto display-inline-block">
+				<i class="fa fa-sticky-note rounded p-2 pr-2"></i><b>TODO LIST</b>
+			</div>
+		</div>
+	</div>
+	<!-- Create todo -->
+	<div class="row m-1 p-3">
+		<div class="col col-11 mx-auto">
+			<div
+				class="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
+				<div class="col">
+					<input
+						class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded"
+						[(ngModel)]="todo.name"
+						type="text"
+						placeholder="Add item..." />
+				</div>
 
-        <div class="col-auto px-1">
-          <button
-            type="button"
-            class="btn btn-sm btn-primary px-2 mr-2"
-            (click)="onAddTodo()"
-          >
-            {{ actionLabel }}
-          </button>
-          <button
-            [disabled]="inUpdateMode"
-            type="button"
-            class="btn btn-sm btn-warning mr3"
-            (click)="onClearInput()"
-          >
-            <i class="fa fa-eraser" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="p-2 mx-4 border-black-25 border-bottom"></div>
+				<div class="col-auto px-1">
+					<button
+						type="button"
+						class="btn btn-sm btn-primary px-2 me-2"
+						(click)="onAddTodo()">
+						{{ actionLabel }}
+					</button>
+					<button
+						[disabled]="inUpdateMode"
+						type="button"
+						class="btn btn-sm btn-warning"
+						(click)="onClearInput()">
+						<i class="fa fa-eraser" aria-hidden="true"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="p-2 mx-4 border-black-25 border-bottom"></div>
 
-  <!-- Todo list -->
-  <div class="row mx-1 px-5 pb-3 w-80">
-    <div class="col mx-auto">
-      <div
-        class="row px-3 align-items-center todo-item rounded"
-        *ngFor="let todo of todos; index as todoId"
-      >
-        <div class="col-auto m-1 p-0 d-flex align-items-center">
-          <h2 class="m-0 p-0">
-            <i
-              (click)="onTodoCompleted(todo)"
-              class="text-primary btn fa"
-              [ngClass]="{
-                'fa-check-square': todo.done,
-                'fa-square-o': !todo.done
-              }"
-            ></i>
-          </h2>
-        </div>
-        <div class="col px-1 m-1 d-flex align-items-center">
-          <input
-            type="text"
-            class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3"
-            readonly
-            [value]="todo.name"
-          />
-        </div>
-        <div class="col-auto m-1 p-0 px-3 d-none"></div>
-        <div class="col-auto m-1 p-0 todo-actions">
-          <div class="row d-flex align-items-center justify-content-end">
-            <h5 class="m-0 p-0 px-2">
-              <i
-                class="fa fa-pencil text-info btn m-0 p-0"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title="Edit todo"
-                (click)="onSelectTodo(todo)"
-              ></i>
-            </h5>
-            <h5 class="m-0 p-0 px-2">
-              <i
-                class="fa fa-trash-o text-danger btn m-0 p-0"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title="Delete todo"
-                (click)="onDeleteTodo(todo)"
-              ></i>
-            </h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<!-- Todo list -->
+	<div class="row mx-1 px-5 pb-3 w-80">
+		<div class="col mx-auto">
+			<div
+				class="row px-3 align-items-center todo-item rounded"
+				*ngFor="let todo of todos; index as todoId">
+				<div class="col-auto m-1 p-0 d-flex align-items-center">
+					<h2 class="m-0 p-0">
+						<i
+							(click)="onTodoCompleted(todo)"
+							(onKeyUp)="onTodoCompleted(todo)"
+							class="text-primary btn fa"
+							[ngClass]="{
+								'fa-check-square': todo.done,
+								'fa-square-o': !todo.done
+							}"></i>
+					</h2>
+				</div>
+				<div class="col px-1 m-1 d-flex align-items-center">
+					<input
+						type="text"
+						class="form-control form-control-lg border-0 edit-todo-input bg-transparent rounded px-3"
+						readonly
+						[value]="todo.name" />
+				</div>
+				<div class="col-auto m-1 p-0 px-3 d-none"></div>
+				<div class="col-auto m-1 p-0 todo-actions">
+					<div class="row d-flex align-items-center justify-content-end">
+						<h5 class="m-0 p-0 px-2">
+							<i
+								class="fa fa-pencil text-info btn m-0 p-0"
+								data-toggle="tooltip"
+								data-placement="bottom"
+								title="Edit todo"
+								(click)="onSelectTodo(todo)"
+								(onKeyUp)="onSelectTodo(todo)"></i>
+						</h5>
+						<h5 class="m-0 p-0 px-2">
+							<i
+								class="fa fa-trash-o text-danger btn m-0 p-0"
+								data-toggle="tooltip"
+								data-placement="bottom"
+								title="Delete todo"
+								(click)="onDeleteTodo(todo)"
+								(onKeyUp)="onDeleteTodo(todo)"></i>
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
