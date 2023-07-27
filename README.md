@@ -11,17 +11,17 @@
 ## :page_facing_up: Table of contents
 
 * [Angular Supabase Data](#angular-supabase-data)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
   * [:flashlight: Testing](#flashlight-testing)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
-  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clipboard: Status \& To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
-  * [:file_folder: License](#file_folder-license)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -36,7 +36,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v15](https://angular.io/)
+* [Angular v16](https://angular.io/)
 * [Supabase public v2](https://supabase.io/) Postgres alternative to Firebase
 * [Bootstrap v5](https://getbootstrap.com/) responsive styling, including ready-made [forms](https://getbootstrap.com/docs/5.0/forms/overview/)
 * [Font Awesome v4](https://fontawesome.com/v4.7/icons/) free icons
@@ -47,11 +47,13 @@
 * Create free account with Supabase and create table using SQL option. Do not enable RLS (Row Level Security)
 * Add Supabase credentials to `utils/initSupabase.ts`
 * `ng serve` for a dev server. Navigate to `http://localhost:4200/` - app will automatically reload if you change any of the source files
+* `npm run lint` to eslint typescript, `npm run lint:fix` to eslint and fix
+* `npm run prettier` to check and fix code formatting
 * `ng build --prod` for a build folder
 
 ## :flashlight: Testing
 
-* `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io). No tests setup.
+* `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 * `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## :computer: Code Examples
@@ -74,12 +76,10 @@ create table todos (
 
 * Status: Working
 * To-Do: Add fields like created & updated dates. Set strict mode to true and correct type error
-* To-Do: add linting eslint
 * To-Do: use Angular routing to add more Supabase tables etc. or remove
 
 ## :clap: Inspiration
 
-* [Prasanna Kumar: Build a Todo app in React with Supabase - The Open-Source Firebase alternative](https://blog.prasanna.codes/build-a-todo-app-in-react-with-supabase-the-open-source-firebase-alternative) - to see how to create SQL table in Supabase
 * [Diligent Dev: Supabase - The Open-source Alternative to Firebase](https://www.youtube.com/watch?v=RpnDkUMNzK0)
 * [Fireship: Is Supabase Legit? Firebase Alternative Breakdown](https://www.youtube.com/watch?v=WiwfiVdfRIc)
 
@@ -89,4 +89,4 @@ create table todos (
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`
